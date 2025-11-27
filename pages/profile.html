@@ -1,0 +1,321 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">🌿 Digital Farm Portal</div>
+        <ul class="nav-links">
+          <li><a href="/index.html" >Home</a></li>
+          <li><a href="/pages/about.html" >About</a></li>
+          <li><a href="/pages/services.html" >Services</a></li>
+          <li><a href="/pages/dashboard.html" >Dashboard</a></li>
+          <li><a href="/pages/chatbot.html" >Chatbot</a></li>
+          <li><a href="/pages/risk.html" >Risk</a></li>
+          <li><a href="/pages/profile.html" class="active">Profile</a></li>
+          <li><a href="/pages/contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+<section class='page'><h1>Animal Profile Management</h1><p>Keep detailed records of each animal including health reports, breeding history, and vaccination schedules.</p></section>
+<footer>
+  <p>© 2025 Digital Farm Management Portal · All Rights Reserved.</p>
+</footer>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Profile Management</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #fff;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1562887285-5f9a4272b3b2?auto=format&fit=crop&w=1400&q=80")
+          center/cover no-repeat fixed;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(0, 100, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #ffd700;
+    }
+
+    /* Main Section */
+    .page {
+      padding: 120px 40px 60px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      margin: 40px;
+    }
+
+    .page h1 {
+      font-size: 2rem;
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+
+    .page p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    /* Animal Cards */
+    .animal-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .animal-card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      width: 250px;
+      padding: 20px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0, 255, 100, 0.2);
+    }
+
+    .animal-card:hover {
+      transform: scale(1.05);
+      background: rgba(0, 255, 100, 0.15);
+    }
+
+    .animal-card img {
+      width: 100%;
+      border-radius: 12px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .animal-card h3 {
+      color: #00ff88;
+      margin-bottom: 5px;
+    }
+
+    .animal-card p {
+      font-size: 0.9rem;
+      color: #eee;
+    }
+
+    /* Form Section */
+    .form-container {
+      margin-top: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #00ff88;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 0.9rem;
+    }
+
+    .add-btn {
+      background: linear-gradient(90deg, #00cc66, #00ff99);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 15px;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .add-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #00ff99, #00cc66);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 50, 0, 0.85);
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🌿 VETRA</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/services.html">Services</a></li>
+        <li><a href="/pages/dashboard.html">Dashboard</a></li>
+        <li><a href="/pages/chatbot.html">Chatbot</a></li>
+        <li><a href="/pages/risk.html">Risk</a></li>
+        <li><a href="/pages/profile.html" class="active">Profile</a></li>
+        <li><a href="/pages/contact.html" class="contact-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <section class="page">
+    <h1>🐄 Animal Profile Management</h1>
+    <p>
+      Keep detailed records of each animal including health reports, breeding history, and vaccination schedules.
+    </p>
+
+    <!-- Animal Cards -->
+    <div class="animal-container" id="animalList">
+      <div class="animal-card">
+        <img src="https://cowcaretaker.com/wp-content/uploads/2022/09/holstein-friesian-cattle-featured-image.jpg" alt=""/>
+        <h3>Daisy</h3>
+        <p>Breed: Holstein Friesian</p>
+        <p>Age: 4 years</p>
+        <p>Last Vaccine: 10 Oct 2025</p>
+      </div>
+
+      <div class="animal-card">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Goat" />
+        <h3>Bella</h3>
+        <p>Breed: Boer Goat</p>
+        <p>Age: 2 years</p>
+        <p>Last Vaccine: 12 Sep 2025</p>
+      </div>
+    </div>
+
+    <!-- Add New Animal -->
+    <div class="form-container">
+      <h2>Add New Animal</h2>
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter animal name" />
+
+      <label>Breed:</label>
+      <input type="text" id="breed" placeholder="Enter breed" />
+
+      <label>Age:</label>
+      <input type="text" id="age" placeholder="Enter age (e.g. 3 years)" />
+
+      <label>Last Vaccine Date:</label>
+      <input type="date" id="vaccine" />
+
+      <label>Photo URL:</label>
+      <input type="text" id="photo" placeholder="Paste image URL" />
+
+      <button class="add-btn" onclick="addAnimal()">+ Add Animal</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Digital Farm Management Portal · All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function addAnimal() {
+      const name = document.getElementById("name").value.trim();
+      const breed = document.getElementById("breed").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const vaccine = document.getElementById("vaccine").value;
+      const photo = document.getElementById("photo").value.trim();
+
+      if (!name || !breed || !age || !vaccine || !photo) {
+        alert("⚠️ Please fill all fields!");
+        return;
+      }
+
+      const newCard = document.createElement("div");
+      newCard.classList.add("animal-card");
+      newCard.innerHTML = `
+        <img src="${photo}" alt="${name}" />
+        <h3>${name}</h3>
+        <p>Breed: ${breed}</p>
+        <p>Age: ${age}</p>
+        <p>Last Vaccine: ${vaccine}</p>
+      `;
+      document.getElementById("animalList").appendChild(newCard);
+
+      // Clear form
+      document.getElementById("name").value = "";
+      document.getElementById("breed").value = "";
+      document.getElementById("age").value = "";
+      document.getElementById("vaccine").value = "";
+      document.getElementById("photo").value = "";
+
+      alert("✅ Animal added successfully!");
+    }
+  </script>
+</body>
+</html>
